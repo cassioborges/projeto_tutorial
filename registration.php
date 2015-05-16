@@ -1,9 +1,9 @@
 <?php
 // DB connection info
-$host = "localhost";
-$user = "user name";
-$pwd = "password";
-$db = "registration";
+$host = "br-cdbr-azure-south-a.cloudapp.net";
+$user = "b5431faf62c2d2";
+$pwd = "62f48895";
+$db = "cassiodb";
 try{
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
