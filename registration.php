@@ -8,9 +8,7 @@ $db = "cassiodb";
 try{
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $sql = "
-
-CREATE TABLE IF NOT EXISTS `cidades` (
+    $sql = "CREATE TABLE IF NOT EXISTS `cidades` (
   `idCidade` int(11) NOT NULL AUTO_INCREMENT,
   `idEstado` int(11) NOT NULL,
   `nomeCidade` varchar(70) NOT NULL,
@@ -5584,53 +5582,7 @@ INSERT INTO `cidades` (`idCidade`, `idEstado`, `nomeCidade`) VALUES
 (5562, 27, 'Tupiratins'),
 (5563, 27, 'WanderlÃ¢ndia'),
 (5564, 27, 'XambioÃ¡');
-
-CREATE TABLE IF NOT EXISTS `estados` (
-  `idEstado` int(11) NOT NULL AUTO_INCREMENT,
-  `sigaEstado` char(2) NOT NULL,
-  `nomeEstado` varchar(50) NOT NULL,
-  PRIMARY KEY (`idEstado`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
-
-INSERT INTO `estados` (`idEstado`, `sigaEstado`, `nomeEstado`) VALUES
-(1, 'AC', 'Acre'),
-(2, 'AL', 'Alagoas'),
-(3, 'AM', 'Amazonas'),
-(4, 'AP', 'AmapÃ¡'),
-(5, 'BA', 'Bahia'),
-(6, 'CE', 'CearÃ¡'),
-(7, 'DF', 'Distrito Federal'),
-(8, 'ES', 'EspÃ­rito Santo'),
-(9, 'GO', 'GoiÃ¡s'),
-(10, 'MA', 'MaranhÃ£o'),
-(11, 'MG', 'Minas Gerais'),
-(12, 'MS', 'Mato Grosso do Sul'),
-(13, 'MT', 'Mato Grosso'),
-(14, 'PA', 'ParÃ¡'),
-(15, 'PB', 'ParaÃ­ba'),
-(16, 'PE', 'Pernambuco'),
-(17, 'PI', 'PiauÃ­'),
-(18, 'PR', 'ParanÃ¡'),
-(19, 'RJ', 'Rio de Janeiro'),
-(20, 'RN', 'Rio Grande do Norte'),
-(21, 'RO', 'RondÃ´nia'),
-(22, 'RR', 'Roraima'),
-(23, 'RS', 'Rio Grande do Sul'),
-(24, 'SC', 'Santa Catarina'),
-(25, 'SE', 'Sergipe'),
-(26, 'SP', 'SÃ£o Paulo'),
-(27, 'TO', 'Tocantins');
-
-CREATE TABLE IF NOT EXISTS `participantes` (
-  `login` varchar(20) NOT NULL,
-  `senha` varchar(50) NOT NULL,
-  `nomeCompleto` varchar(50) NOT NULL,
-  `arquivoFoto` varchar(50) NOT NULL,
-  `cidade` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `descricao` varchar(5000) NOT NULL,
-  PRIMARY KEY (`login`)
-)";
+";
                 
     $conn->query($sql);
 }
