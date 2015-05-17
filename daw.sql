@@ -1,4 +1,13 @@
--- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
+<?php
+// DB connection info
+$host = "br-cdbr-azure-south-a.cloudapp.net";
+$user = "b5431faf62c2d2";
+$pwd = "62f48895";
+$db = "cassiodb";
+try{
+    $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $sql = "-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: daw_yearbook
 -- ------------------------------------------------------
@@ -102,4 +111,11 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-05-12 12:16:08
+-- Dump completed on 2014-05-12 12:16:08";
+    $conn->query($sql);
+}
+catch(Exception $e){
+    die(print_r($e));
+}
+echo "<h3>Table created.</h3>";
+?>
