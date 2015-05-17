@@ -8,12 +8,12 @@ $db = "cassiodb";
 try{
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $sql = "CREATE TABLE IF NOT EXISTS `cidades` (
+    $sql = "CREATE TABLE `cidades` (
   `idCidade` int(11) NOT NULL AUTO_INCREMENT,
   `idEstado` int(11) NOT NULL,
   `nomeCidade` varchar(70) NOT NULL,
   PRIMARY KEY (`idCidade`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8192 ;
+) 
 
 INSERT INTO `cidades` (`idCidade`, `idEstado`, `nomeCidade`) VALUES
 (1, 8, 'Afonso ClÃ¡udio'),
