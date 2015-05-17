@@ -1,7 +1,7 @@
 ﻿<?php
  
- mysql_connect("br-cdbr-azure-south-a.cloudapp.net", "b5431faf62c2d2", "62f48895");
-         				mysql_select_db("cassiodb");
+ //mysql_connect("br-cdbr-azure-south-a.cloudapp.net", "b5431faf62c2d2", "62f48895");
+         				//mysql_select_db("cassiodb");
  
 $estado = $_POST['estado'];
 
