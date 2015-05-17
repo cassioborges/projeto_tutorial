@@ -8,7 +8,7 @@ $db = "cassiodb";
 try{
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $sql = "CREATE TABLE teste(
+    $sql = "CREATE TABLE registration_tbl2(
                 id INT NOT NULL AUTO_INCREMENT, 
                 PRIMARY KEY(id),
                 name VARCHAR(30),
